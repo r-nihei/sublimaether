@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sublimaether</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- HUD（最低限：速度・高度） -->
+  <div id="hud">
+    <div class="hud-item"><span class="label">SPD</span><span id="spd">0</span></div>
+    <div class="hud-item"><span class="label">ALT</span><span id="alt">0</span></div>
+  </div>
+
+  <!-- 操作説明（一時表示） -->
+  <div id="controls">
+    <div><strong>Sublimaether v0.1.0a</strong></div>
+    <div>W / S : 加速 / 減速</div>
+    <div>A / D : ロール左 / 右</div>
+    <div>↑ / ↓ : ピッチ アップ / ダウン</div>
+    <div>← / → : ヨー 左 / 右</div>
+    <div class="hint">（このパネルは H キーで表示切替）</div>
+  </div>
+
+  <!-- Three.js を ESM で読む（importmap） -->
+  <script type="importmap">
+  {
+    "imports": {
+      "three": "https://unpkg.com/three@0.160.0/build/three.module.js"
+    }
+  }
+  </script>
+  <script type="module" src="main.js"></script>
+
+</body>
+</html>
